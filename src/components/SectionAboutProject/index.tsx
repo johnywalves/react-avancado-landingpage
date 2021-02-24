@@ -18,8 +18,8 @@ const SectionAboutProject = ({
       <S.Container>
         <S.Image
           src={getImageUrl(image.url)}
-          loading="lazy"
           alt={image.alternativeText}
+          loading="lazy"
         />
         <div>
           <Heading>{title}</Heading>

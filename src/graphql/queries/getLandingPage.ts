@@ -1,4 +1,5 @@
 const GET_LANDING_PAGE = /* GraphQL */ `
+  # Write your query or mutation here
   fragment imageData on UploadFile {
     alternativeText
     url
@@ -55,6 +56,17 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionModules on LandingPage {
+    sectionModules {
+      title
+      modules {
+        title
+        subtitle
+        description
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       createdAt: created_at
@@ -63,6 +75,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAboutProject
       ...sectionTech
       ...sectionConcepts
+      ...sectionModules
     }
   }
 `

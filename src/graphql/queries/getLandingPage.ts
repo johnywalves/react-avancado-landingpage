@@ -121,6 +121,16 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionFaqs on LandingPage {
+    sectionFaq {
+      title
+      questions {
+        question
+        answer
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       createdAt: created_at
@@ -134,6 +144,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...pricingBox
       ...sectionAboutUs
       ...sectionReviews
+      ...sectionFaqs
     }
   }
 `

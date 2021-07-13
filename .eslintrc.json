@@ -16,7 +16,8 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
-    "eslint-config-prettier"
+    "eslint-config-prettier",
+    "plugin:@next/next/recommended"
   ],
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
